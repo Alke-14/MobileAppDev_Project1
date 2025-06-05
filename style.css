@@ -1,0 +1,127 @@
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333333;
+    color: white;
+}
+
+.main {
+    background-image: url(https://i.pinimg.com/originals/42/83/6a/42836adf0826dbfa27034fc55566d3a2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+}
+
+
+
+nav {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    box-shadow: 10px 5px 5px #6f4b75;
+    justify-content: center;
+    margin: 1rem;
+    background-color: #333333;
+    border-radius: 5px;
+    width: 230px;
+}
+
+nav a {
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #e39af0;
+    color: black;
+    transition: ease-out 0.5s;
+}
+
+
+.welcome {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.container {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.description {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+}
+
+.description a {
+    color: #e39af0;
+    text-decoration: none;
+}
+
+.description a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    transition: ease-out 0.5s;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(320px, 1fr));
+    gap: 0.5rem;
+    padding: 1rem;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1025px){
+    .gallery {
+        grid-template-columns: repeat(3, minmax(320px, 1fr));
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .gallery {
+        grid-template-columns: repeat(2, minmax(320px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .header {
+        display: grid; 
+        justify-content: center;
+    }
+    .gallery {
+        grid-template-columns: repeat(1, minmax(320px, 1fr));
+    }
+}
+
